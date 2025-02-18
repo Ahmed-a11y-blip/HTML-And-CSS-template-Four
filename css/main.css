@@ -1,0 +1,423 @@
+body{
+    font-family: "Open Sans", serif;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1250px;
+    }
+}
+/* Start  Header  */
+header{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo{
+    width: 150px;
+}
+header .container .logo img{
+    max-width: 100%;
+}
+header .container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+header .container nav ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    transition: 0.4s;
+}
+@media (max-width:767px){
+    header {
+        padding-top: 20px;
+    }
+    header .container {
+        justify-content: space-between;
+    }
+    header .container .logo {
+        width: 100px;
+    }
+    header .container nav ul {
+        gap: 15px;
+    }
+}
+/* End  Header  */
+/* Start Section One  */
+.section-one{
+    padding-bottom: 50px;
+}
+.section-one .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+@media (max-width:1000px){
+    .section-one .container {
+        flex-wrap: wrap-reverse;
+    }
+}
+.section-one .container .text {
+    /* width: 55%; */
+    padding-top: 50px;
+}
+@media (max-width:767px){
+    .section-one .container .text {
+        text-align: center;
+    }
+}
+.section-one .container .text h1 {
+    font-family: "Raleway", serif;
+    color: hsl(243, 87%, 12%);
+    line-height: 1.5;
+}
+.section-one .container .text p {
+    line-height: 1.7;
+    color: hsl(243, 87%, 12%);
+}
+.section-one .container .text .subscribe input[type="email"] {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid hsl(224, 93%, 58%);
+    border-radius: 5px;
+}
+.section-one .container .text .subscribe input[type="email"]:focus {
+    outline: none;
+}
+.section-one .container .text .subscribe input[type="submit"] {
+    padding: 11px;
+    width: 200px;
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width:767px){
+    .section-one .container .text .subscribe input[type="submit"] {
+        margin-top: 10px;
+        width: 320px;
+        text-align: center;
+        margin-left: -10px;
+    }
+}
+.section-one .container .image {
+    width: 900px;
+}
+.section-one .image img{
+    max-width: 100%;
+}
+/* End Section One  */
+
+/* Start Section Two  */
+.section-two{
+    padding-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 100px;
+    position: relative;
+    background-color: hsl(240, 75%, 98%);
+}
+.section-two::before {
+    content: "";
+    background-image: url("../images/bg-curve-desktop.svg");
+    position: absolute;
+    top: -86px;
+    width: 100%;
+    height: 15%;
+}
+@media (max-width:767px){
+    .section-two::before {
+        display: none;
+    }
+    .section-two::after {
+        content: "";
+        background-image: url("../images/bg-curve-mobile.svg");
+        position: absolute;
+        top: -48px;
+        width: 100%;
+        height: 5%;
+    }
+}
+.section-two .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+@media (max-width:1000px) {
+    .section-two .container {
+        flex-wrap: wrap-reverse;
+    }
+}
+.section-two .container .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.section-two .container .text .content h1{
+    font-family: "Raleway", serif;
+    color: hsl(243, 87%, 12%);
+}
+@media (max-width:1000px) {
+    .section-two .container .text .content h1 {
+        text-align: center;
+    }
+}
+.section-two .container .text .content p{
+    width: 80%;
+    line-height: 1.7;
+}
+.section-two .container .text .content a {
+    color: green;
+    text-decoration: none;
+    padding-bottom: 5px;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.section-two .container .text .content a::before {
+    content: "";
+    width: 25%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: green;
+}
+.section-two .container .text .box{
+    margin-top: 50px;
+    padding: 15px;
+    background-color: white;
+    width: 70%;
+}
+@media (max-width:1000px) {
+    .section-two .container .text .content p {
+        width: 100%;
+    }
+    .section-two .container .text .content a {
+        text-align: center;
+    }
+    .section-two .container .text .box {
+        margin-left: auto ;
+        margin-right: auto ;
+        width: 90%;
+    }
+}
+.section-two .container .text .box p{
+    line-height: 1.7;
+}
+.section-two .container .text .box .nameandimage{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.section-two .container .text .box .nameandimage .info .name{
+    margin-top: 0;
+    margin-bottom: -4px;
+    color: hsl(243, 87%, 12%);
+    font-weight: bold;
+}
+.section-two .container .text .box .nameandimage .info .job{
+    font-size: 12px;
+}
+.section-two .container .text .box .nameandimage img{
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.section-two .container .image {
+    width: 1600px;
+}
+.section-two .container .image img {
+    max-width: 100%;
+}
+/* End Section Two  */
+/* Start Section Three  */
+.section-three {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    background-color: hsl(238, 22%, 44%);
+}
+.section-three .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.section-three .container .text{
+    color: white;
+    flex-basis: 40%;
+}
+.section-three .container .text h2{
+    font-family: "Raleway", serif;
+    margin: 0;
+}
+.section-three .container .text p{
+    line-height: 1.6;
+}
+.section-three .container .the-form{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 70px;
+}
+@media (max-width:990px){
+    .section-three .container .text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .section-three .container .the-form {
+        padding-right: 0;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.section-three .container .the-form input[type="email"]{
+    flex-basis: 100%;
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    border: 1px solid hsl(224, 93%, 58%);
+    border-radius: 5px;
+}
+.section-three .container .the-form input[type="email"]:focus {
+    outline: none;
+}
+.section-three .container .the-form input[type="submit"]{
+    padding: 15px;
+    flex-basis: 50%;
+    margin-right: 10px;
+    background-color: hsl(224, 93%, 58%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+@media (max-width:990px) {
+    .section-three .container .the-form input[type="submit"] {
+        flex-basis: 100%;
+        /* margin-right: 0; */
+    }
+    .section-three .container .the-form input[type="email"] {
+        /* margin-right: 0; */
+    }
+}
+/* End Section Three  */
+/* Start Footer  */
+footer{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: hsl(243, 87%, 12%);
+}
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    justify-content: center;
+    align-items: center;
+}
+footer .container .contact .box{
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+footer .container .contact .box:first-child {
+    margin-bottom: 10px;
+}
+footer .container .contact .box h2{
+    font-size: 45px;
+    margin: 0;
+}
+footer .container .Info ul {
+    list-style: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+} 
+
+footer .container .Info ul li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 15px;
+} 
+footer .container .Info ul li.fit {
+    width: fit-content;
+}
+@media (max-width:767px) {
+    footer .container .Info ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-left: 0;
+    }
+    footer .container .Info ul li{
+        display: block;
+    }
+}
+footer .container .icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .container .icons i{
+    margin-right: 10px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+}
+footer .container .icons i:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 0 3px hsl(193, 100%, 96%);
+    background-color: white;
+    color: blue;
+}
+footer .container .icons i:last-child:hover{
+    color: #E1306C;
+}
+/* End Footer  */
